@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-  // ===== Helpers =====
+
   const emailValid = (email) => /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i.test(email);
   const ensureErrorP = (inputEl) => {
     let p = inputEl.parentElement.querySelector('.error');
@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function () {
     inputEl.classList.add('valid');
   };
 
-  // ===== Form validation (A) =====
+
   const form = document.querySelector('form.form-box');
   const nameInput = document.getElementById('hoten');
   const emailInput = document.getElementById('email');
@@ -77,7 +77,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  // ===== Checkbox “Hoàn thành mục tiêu” (B) =====
+
   document.querySelectorAll('.muc-tieu tbody tr').forEach(tr => {
     const cb = tr.querySelector('input[type="checkbox"]');
     if (!cb) return;
@@ -86,7 +86,7 @@ document.addEventListener('DOMContentLoaded', function () {
     cb.addEventListener('change', () => tr.classList.toggle('done', cb.checked));
   });
 
-  // ===== Hiệu ứng ảnh đại diện (C) =====
+
   const avatar = document.querySelector('.avatar');
   if (avatar) {
     avatar.style.cursor = 'pointer';
@@ -96,7 +96,7 @@ document.addEventListener('DOMContentLoaded', function () {
     avatar.addEventListener('mouseleave', off);
   }
 
-  // (tuỳ chọn) cuộn mượt fallback cho trình duyệt cũ
+
   document.querySelectorAll('nav a[href^="#"]').forEach(a => {
     a.addEventListener('click', (e) => {
       const id = a.getAttribute('href').slice(1);
@@ -107,3 +107,4 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 });
+
