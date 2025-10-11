@@ -1,0 +1,71 @@
+/* Màu tiêu đề */
+.h1-color { color: #CAEDFF; }
+.h2-color { color: #D8B4F8; }
+.h3-color { color: #FFC7EA; }
+
+/* Ảnh đại diện (+ hiệu ứng) */
+.avatar{
+  display:block; margin:0 auto;
+  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+  border-radius:8px; border:3px solid transparent;
+}
+.avatar.zoom{
+  transform: scale(1.12);
+  border-color:#74c0fc;
+  box-shadow:0 10px 24px rgba(0,0,0,.25);
+}
+
+/* 2 phần */
+#gioi-thieu { background:#F3FDE8; padding:16px; border-radius:12px; }
+#lien-he {
+  background-image:url("image/bg.png"); /* đảm bảo có file này trong /image */
+  background-repeat:repeat;
+  text-align:center;
+  padding:16px; border-radius:12px;
+}
+
+/* H1–H4 */
+h1, h2, h3, h4 { font-size:24px; -webkit-text-stroke:1px #000; }
+
+/* Bảng mục tiêu */
+.muc-tieu { border-collapse:collapse; width:100%; max-width:720px; margin:12px 0; }
+.muc-tieu th, .muc-tieu td { border:1px solid #000; padding:8px; }
+
+/* Hoàn thành mục tiêu (B) */
+.muc-tieu tr.done td {
+  background-color:#c6f5c6;
+  text-decoration:line-through;
+  color:#555;
+}
+
+/* Form */
+.form-box { display:inline-block; text-align:left; max-width:520px; }
+.row { margin:12px 0; }
+.row label { display:inline-block; width:120px; vertical-align:top; }
+.row input[type="text"], .row input[type="email"], .row select, .row textarea {
+  width:360px; box-sizing:border-box;
+}
+.group { margin:16px 0; border:none; padding:0; }
+.group legend { margin-bottom:6px; font-weight:600; }
+.group label { margin-right:16px; }
+
+/* nav & footer */
+nav, footer {
+  background:#d4f2f4;
+  color:#0b0848;
+  padding:10px 14px;
+  border-radius:8px;
+}
+nav a { color:inherit; text-decoration:none; font-weight:600; margin-right:12px; }
+nav a:hover { text-decoration:underline; }
+
+/* Thông báo lỗi (A) */
+.error { color:#d11; font-size:14px; margin:6px 0 0 120px; }
+input.invalid, textarea.invalid { outline:2px solid #d11; }
+input.valid, textarea.valid { outline:2px solid #45a049; }
+
+/* Thẩm mỹ */
+body { font-family:system-ui, Arial, sans-serif; line-height:1.5; margin:16px; }
+
+/* Cuộn mượt */
+html { scroll-behavior:smooth; }
