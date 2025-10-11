@@ -106,5 +106,18 @@ document.addEventListener('DOMContentLoaded', function () {
       window.scrollTo({ top: target.offsetTop - 10, behavior: 'smooth' });
     });
   });
+  
+  const avatar = document.querySelector('.avatar');
+  if (!avatar) return;
+
+ 
+  avatar.style.cursor = 'pointer';
+
+  function on()  { avatar.classList.add('zoom');  }
+  function off() { avatar.classList.remove('zoom'); }
+
+  avatar.addEventListener('mouseenter', on);   
+  avatar.addEventListener('mouseleave', off);  
 });
+
 
